@@ -1,5 +1,6 @@
 let board = document.getElementById("board");
 let button_1 = document.getElementById("button-1");
+let once = false;
 button_1.addEventListener("click", function begin() {
   let weight = document.getElementById("weight").value;
   let height = document.getElementById("height").value;
@@ -20,11 +21,15 @@ button_1.addEventListener("click", function begin() {
       category = "Béo phì";
     }
     document.getElementById("result-bmi").innerText = category;
-    localStorage.setItem("BMI", bmi)
+    localStorage.setItem("BMI", bmi);
     const link = document.createElement("a");
     link.href = "./third.html";
-    link.innerHTML = "Go to next";
-    board.appendChild(link);
+    link.innerHTML = "Qua bài tiếp theo";
+
+    if (once == false) {
+      board.appendChild(link);
+      once = true;
+    }
   } else {
     console.log("Please enter valid numbers for weight and height.");
   }

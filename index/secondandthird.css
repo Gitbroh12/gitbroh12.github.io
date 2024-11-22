@@ -1,65 +1,87 @@
-/* Đặt nền cho trang */
+/* Tổng thể */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #74ebd5, #9face6);
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #c9dfc7; /* Màu nền nhẹ */
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Chiều cao màn hình */
 }
 
-/* Định dạng tiêu đề chính */
-h1 {
+/* Container chính */
+.container {
+  background: #ffffff; /* Nền trắng */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px 0;
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  width: 90%; /* Đảm bảo hiển thị tốt trên màn hình nhỏ */
+  max-width: 400px; /* Giới hạn chiều rộng */
 }
 
-/* Khung cho từng phần câu hỏi */
-.question {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+/* Tiêu đề và mô tả */
+.container h1 {
+  font-size: 2rem;
+  color: #0073e6;
+  margin-bottom: 10px;
 }
 
-/* Tiêu đề từng phần */
-h3 {
-  color: #4a90e2;
+.container p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Nhóm input */
+.input-group {
   margin-bottom: 15px;
+  text-align: left;
 }
 
-/* Căn chỉnh các câu hỏi và nhãn */
-p {
-  margin: 10px 0;
-  font-weight: bold;
-}
-
-label {
+.input-group label {
   display: block;
-  margin: 5px 0;
-  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
 }
 
-/* Nút gửi */
-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4a90e2;
+.input-group input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #0073e6;
+  outline: none;
+}
+
+/* Nút tính toán */
+.calculate-button {
+  background-color: #c9dfc7; /* Màu nền nhẹ */
   color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #357abd;
+.calculate-button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+.calculate-button:active {
+  transform: translateY(0);
 }
 body {
   padding: 100px;

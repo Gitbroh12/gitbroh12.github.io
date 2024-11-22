@@ -164,9 +164,10 @@ document.getElementById("send").addEventListener("click", function () {
     );
     negative_B -= 1;
   }
-
+  let needWater = false;
   // Câu 4
   if (water.value === "under1") {
+    needWater = true;
     messages.push(
       "8. Uống quá ít nước, hãy cố gắng uống ít nhất 1,5-2 lít nước mỗi ngày."
     );
@@ -182,8 +183,15 @@ document.getElementById("send").addEventListener("click", function () {
   }
   console.log("A" + negative_A);
   console.log("B" + negative_B);
- localStorage.setItem("negative_A", negative_A);
- localStorage.setItem("negative_B", negative_B);
+  // Initialize negative_B from localStorage or set it to an empty string if null
+  // Append the message only if `needWater` is true
+  if (needWater) {
+    localStorage.setItem("needWater", true);
+  }
+
+  // Save the updated negative_B back to localStorage
+  localStorage.setItem("negative_B", negative_B);
+  localStorage.setItem("negative_A", negative_A);
   // Hiển thị kết quả
   document.getElementById("result").innerHTML = messages.join("<br>");
   // Create the link

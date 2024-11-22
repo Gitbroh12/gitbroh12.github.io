@@ -94,17 +94,31 @@ if (parseFloat(negative_A) == 0) {
   sleep.innerText =
     "Tình trạng giấc ngủ: bạn có giấc ngủ thường xuyên và ổn định, hãy cố gắng duy trì";
 }
+let needWater = localStorage.getItem("needWater");
 let negative_B = localStorage.getItem("negative_B");
 console.log(negative_B);
 
 let food = document.getElementById("food");
-if (parseFloat(negative_B) <= 1) {
-  food.innerText =
-    "Tình trạng bữa ăn: Chất lượng ăn của bạn nên được cải thiện.";
-} else if (parseFloat(negative_B) <= -1) {
-  food.innerText =
-    "Tình trạng bữa ăn: Chất lượng ăn của bạn chưa tốt, cần cải thiện.";
+if (needWater === "true") {
+  if (parseFloat(negative_B) <= 1) {
+    food.innerText =
+      "Tình trạng bữa ăn: Chất lượng ăn của bạn nên được cải thiện và cần uống đủ 1.5-2 lít nước mỗi ngày.";
+  } else if (parseFloat(negative_B) <= -1) {
+    food.innerText =
+      "Tình trạng bữa ăn: Chất lượng ăn của bạn chưa tốt, cần cải thiện cả chất lượng ăn lẫn lượng cung cấp nước cho cơ thể.";
+  } else {
+    food.innerText =
+      "Tình trạng bữa ăn: Chất lượng bữa ăn tốt. Tuy nhiên cần bổ sung 1.5-2 lít nước mỗi ngày.";
+  }
 } else {
-  food.innerText =
-    "Tình trạng bữa ăn: Chất lượng bữa ăn tốt, hãy cố gắng duy trì.";
+  if (parseFloat(negative_B) <= 1) {
+    food.innerText =
+      "Tình trạng bữa ăn: Chất lượng ăn của bạn nên được cải thiện.";
+  } else if (parseFloat(negative_B) <= -1) {
+    food.innerText =
+      "Tình trạng bữa ăn: Chất lượng ăn của bạn chưa tốt, cần cải thiện.";
+  } else {
+    food.innerText =
+      "Tình trạng bữa ăn: Chất lượng bữa ăn tốt, hãy cố gắng duy trì.";
+  }
 }

@@ -6,16 +6,17 @@ body {
   padding: 0;
   color: #333;
 }
-a {
-  display: flex;
-  justify-content: center;
-}
+
 /* Định dạng tiêu đề chính */
 h1 {
   text-align: center;
   padding: 20px 0;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
 }
 
 /* Khung cho từng phần câu hỏi */
@@ -30,7 +31,7 @@ h1 {
 
 /* Tiêu đề từng phần */
 h3 {
-  color: #4f7fb5;
+  color: #4a90e2;
   margin-bottom: 15px;
 }
 
@@ -67,18 +68,8 @@ button:hover {
 
 /* Kết quả */
 #result {
-  overflow-y: auto;
   text-align: center;
   margin-top: 20px;
   font-size: 18px;
-  background-color: #96b2cb;
-  height: 22vh;
-  width: 45vw;
-  margin: 0 auto;
-  border-radius: 30px;
-}
-a {
-  text-decoration: none;
-  font-size: 20px;
-  color: rgb(13, 0, 255);
+  color: #333;
 }

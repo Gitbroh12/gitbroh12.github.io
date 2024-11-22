@@ -19,7 +19,7 @@ button_1.addEventListener("click", function begin() {
     } else {
       category = "Béo phì";
     }
-    document.getElementById("result").innerText = category;
+    document.getElementById("result-bmi").innerText = category;
     localStorage.setItem("BMI", bmi)
     const link = document.createElement("a");
     link.href = "./third.html";

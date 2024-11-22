@@ -168,7 +168,7 @@ document.getElementById("send").addEventListener("click", () => {
 
     let address = document.createElement("a");
     address.href = "../fifth/fifth.html";
-    address.innerHTML = "Click vào đây để xem kết quả";
+    address.innerHTML = "Click vào đây để qua bài tiếp theo";
     document.body.appendChild(address);
   }
 });
